@@ -1,7 +1,5 @@
 FROM ubuntu:22.04
 
-# COPY ossutil restic /usr/local/bin/
-
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \
     apt update && \
     apt install -y vim openssl ssh telnet wget curl \
