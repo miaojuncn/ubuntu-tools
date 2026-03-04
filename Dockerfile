@@ -2,9 +2,9 @@ FROM ubuntu:22.04
 
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \
     apt update && \
-    apt install -y vim openssl ssh telnet wget curl \
+    apt install -y vim openssl ssh telnet wget curl  \
     net-tools traceroute tcpdump sysstat git \
-    zip iputils-ping iproute2 rsync make \
+    zip iputils-ping iproute2 rsync make util-linux \
     mysql-server redis netcat dnsutils tree nodejs npm maven && \
     apt autoclean && apt autoremove -y && rm -rf /var/lib/apt/lists/*
 
